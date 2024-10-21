@@ -1,0 +1,1 @@
+{drive}/NEW/{anime ? 'Anime' : 'TV Shows'}/{anime ? 'Anime' : 'TV Shows'} - {info.status}/{n} {"{tvdb-"+db.TheTVDB.id+"}"} {"["}{info.status}{"]"}/{n} {episode.special ? 'Specials' : 'Season '+s.pad(2)}/{n} - {episode.special ? 'S00E'+special.pad(2) : s00e00} - {t.replaceAll(/[`´‘’ʻ]/, /'/).replaceAll(/[!?.]+$/).replacePart(', Part $1')}{'.'+lang}

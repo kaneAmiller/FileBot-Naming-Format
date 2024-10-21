@@ -1,0 +1,12 @@
+{drive}/NEW/{anime ? 'Anime' : null}/{anime ? 'Anime - Movies' : 'Movies'}
+/{
+  norm = {
+    it.colon(' - ').tr('*?|', ' !-')
+      .asciiQuotes()
+      .replaceAll(/\b(?i)[IVX]+\b/, { it.upper() })
+      .replaceAll(/\b[0-9](?i:st|nd|rd|th)\b/, { it.lower() })
+      .replaceAll(/(Collection) of the (.+)/, /$2 $1/)
+      .replaceAll(/(Saga) Collection/, /$1/)
+      .replaceAll(/^(?i)(The|A|An|Der|Die|Das) (.+)/, /$2, $1/)
+  };{collection}}
+/{n} ({y}){" {imdb-$imdbid}"}{" {edition-${tags[0]}}"} {"- "}{"["}{vs+'.'}{hd}{'.'+fn.match(/UHD/)}{'.'}{vf}{'.'+group}{"]"}

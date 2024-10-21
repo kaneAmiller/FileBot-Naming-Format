@@ -1,0 +1,1 @@
+{drive}/Music/{n.split(', ')[0]}/{album+'/'}{pi.pad(2)+'. '} {t}
