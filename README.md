@@ -1,0 +1,1 @@
+# filebot-naming-format
